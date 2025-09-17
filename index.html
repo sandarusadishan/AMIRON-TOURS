@@ -10,7 +10,6 @@
       type="image/png"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -24,7 +23,7 @@
                         'text-dark': '#424242',
                     },
                     fontFamily: {
-                        sans: ['Poppins', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
                     },
                     keyframes: {
                         fadeInUp: {
@@ -70,7 +69,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: #F5F5F5;
         }
         .hero-section {
@@ -161,6 +160,12 @@
             </a>
         </div>
 
+        <button id="prev-slide" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/30 text-white hover:bg-white/50 transition-colors">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="next-slide" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/30 text-white hover:bg-white/50 transition-colors">
+            <i class="fas fa-chevron-right"></i>
+        </button>
     </section>
 
     <section id="about" class="py-20 lg:py-24 bg-background overflow-hidden">
@@ -499,6 +504,8 @@
 
         // Hero Image Slideshow Logic
         const slideshowImages = document.querySelectorAll('#slideshow-container .slideshow-image');
+        const nextButton = document.getElementById('next-slide');
+        const prevButton = document.getElementById('prev-slide');
         let currentImageIndex = 0;
 
         function showImage(index) {
@@ -512,11 +519,29 @@
             showImage(currentImageIndex);
         }
 
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + slideshowImages.length) % slideshowImages.length;
+            showImage(currentImageIndex);
+        }
+
         // Initial setup
         showImage(currentImageIndex);
 
         // Automatic slideshow
         let slideshowInterval = setInterval(nextImage, 5000); // Change image every 5 seconds
+
+        // Manual controls
+        nextButton.addEventListener('click', () => {
+            clearInterval(slideshowInterval);
+            nextImage();
+            slideshowInterval = setInterval(nextImage, 5000); // Restart the timer
+        });
+
+        prevButton.addEventListener('click', () => {
+            clearInterval(slideshowInterval);
+            prevImage();
+            slideshowInterval = setInterval(nextImage, 5000); // Restart the timer
+        });
 
         // Email.js Contact Form Logic
         document.getElementById('contact-form').addEventListener('submit', function(event) {
