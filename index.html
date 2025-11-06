@@ -9,7 +9,7 @@
         href="./src/assets/logo/amit.jpg"
         type="image/png"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" onload="document.body.classList.remove('hidden')"></script>
     <script>
         // Modern Tailwind Configuration with Inter Font and Custom Colors
         tailwind.config = {
@@ -104,6 +104,7 @@
             font-weight: 700; /* Bold */
             font-style: normal; /* Remove italics for a cleaner bolder look */
         }
+<<<<<<< HEAD
 
         /* WhatsApp Button - Fixed for all screens */
         .whatsapp-float {
@@ -300,9 +301,11 @@
             max-width: 100%;
             height: auto;
         }
+=======
+>>>>>>> 379e968fca97ee77ecd43b10def31150877aab69
     </style>
 </head>
-<body class="overflow-x-hidden bg-background text-text-dark">
+<body class="overflow-x-hidden bg-background text-text-dark hidden">
 
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300">
         <nav class="container mx-auto flex items-center justify-between px-4 lg:px-8">
@@ -699,7 +702,11 @@
         </div>
     </footer>
     
+<<<<<<< HEAD
     <a href="https://wa.me/94779479917" target="_blank" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
+=======
+    <a href="https://wa.me/94779479917" target="_blank" class="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-secondary shadow-2xl transition-all duration-300 transform hover:scale-110 animate-whatsappPulse text-white" aria-label="Chat with us on WhatsApp">
+>>>>>>> 379e968fca97ee77ecd43b10def31150877aab69
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
@@ -1053,19 +1060,6 @@
                 createMobileAccordion();
             }
         });
-
-        // Mobile responsiveness helper functions
-        function checkMobileView() {
-            if (window.innerWidth <= 768) {
-                document.body.classList.add('mobile-view');
-            } else {
-                document.body.classList.remove('mobile-view');
-            }
-        }
-
-        // Check on load and resize
-        window.addEventListener('load', checkMobileView);
-        window.addEventListener('resize', checkMobileView);
     </script>
 </body>
 </html>
