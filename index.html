@@ -9,7 +9,7 @@
         href="./src/assets/logo/amit.jpg"
         type="image/png"
     />
-    <script src="https://cdn.tailwindcss.com" onload="document.body.classList.remove('hidden')"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // Modern Tailwind Configuration with Inter Font and Custom Colors
         tailwind.config = {
@@ -104,208 +104,9 @@
             font-weight: 700; /* Bold */
             font-style: normal; /* Remove italics for a cleaner bolder look */
         }
-<<<<<<< HEAD
-
-        /* WhatsApp Button - Fixed for all screens */
-        .whatsapp-float {
-            position: fixed !important;
-            bottom: 2rem !important;
-            right: 2rem !important;
-            z-index: 10000 !important;
-            padding: 1rem !important;
-            background: #25D366 !important;
-            border-radius: 50% !important;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
-            transition: all 0.3s ease !important;
-            animation: whatsappPulse 1.5s infinite ease-in-out !important;
-        }
-
-        /* Mobile Responsive Fixes */
-        @media screen and (max-width: 768px) {
-            /* Header fixes */
-            #main-header {
-                padding: 0.5rem 0 !important;
-            }
-            
-            #site-logo-link {
-                margin-left: 0.5rem !important;
-            }
-            
-            #site-name {
-                font-size: 1.1rem !important;
-            }
-            
-            /* WhatsApp button positioning for mobile */
-            .whatsapp-float {
-                bottom: 5rem !important;
-                right: 1rem !important;
-                padding: 0.8rem !important;
-            }
-            
-            .whatsapp-float i {
-                font-size: 1.5rem !important;
-            }
-            
-            /* Hero section fixes */
-            .hero-section h1 {
-                font-size: 2rem !important;
-                padding: 0 1rem !important;
-                line-height: 1.2 !important;
-            }
-            
-            .hero-section p {
-                font-size: 1rem !important;
-                padding: 0 1rem !important;
-            }
-
-            .hero-section a.inline-block {
-                padding: 0.75rem 1.5rem !important;
-                font-size: 0.9rem !important;
-            }
-            
-            /* Container padding fixes */
-            .container {
-                padding-left: 1rem !important;
-                padding-right: 1rem !important;
-            }
-            
-            /* Section padding fixes */
-            section {
-                padding-left: 1rem !important;
-                padding-right: 1rem !important;
-                padding-top: 3rem !important;
-                padding-bottom: 3rem !important;
-            }
-            
-            /* Testimonial carousel fixes */
-            #testimonial-carousel {
-                margin: 0 0.5rem !important;
-            }
-            
-            /* Form fixes */
-            #contact-form {
-                padding: 0.5rem !important;
-            }
-            
-            /* Footer fixes */
-            footer {
-                padding: 2rem 1rem !important;
-            }
-            
-            footer .grid {
-                gap: 2rem !important;
-            }
-
-            /* Mobile menu improvements */
-            #mobile-menu {
-                position: absolute !important;
-                top: 100% !important;
-                left: 0.5rem !important;
-                right: 0.5rem !important;
-                z-index: 1000 !important;
-                border-radius: 0.5rem !important;
-            }
-
-            /* Grid fixes for mobile */
-            .grid-cols-2, .grid-cols-3, .md\:grid-cols-2, .md\:grid-cols-3, .lg\:grid-cols-3 {
-                grid-template-columns: 1fr !important;
-            }
-
-            /* Text sizing for mobile */
-            .text-4xl, .text-5xl, .text-7xl {
-                font-size: 1.75rem !important;
-            }
-
-            .text-3xl {
-                font-size: 1.5rem !important;
-            }
-
-            .text-2xl {
-                font-size: 1.25rem !important;
-            }
-
-            .text-xl {
-                font-size: 1.1rem !important;
-            }
-
-            .text-lg {
-                font-size: 1rem !important;
-            }
-
-            /* Button sizing */
-            .inline-block {
-                display: block !important;
-                width: 100% !important;
-                text-align: center !important;
-                padding: 0.75rem 1rem !important;
-                margin: 0.5rem 0 !important;
-            }
-
-            /* Card padding */
-            .p-6, .p-8 {
-                padding: 1rem !important;
-            }
-
-            /* Testimonial text */
-            .testimonial-card p {
-                font-size: 1rem !important;
-            }
-
-            /* Image sizing for mobile */
-            img {
-                max-width: 100% !important;
-                height: auto !important;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            /* Extra small devices */
-            .hero-section h1 {
-                font-size: 1.75rem !important;
-            }
-            
-            .hero-section p {
-                font-size: 0.9rem !important;
-            }
-            
-            .whatsapp-float {
-                bottom: 4rem !important;
-                right: 0.75rem !important;
-                padding: 0.7rem !important;
-            }
-            
-            .whatsapp-float i {
-                font-size: 1.3rem !important;
-            }
-
-            /* Section spacing */
-            section {
-                padding-top: 2rem !important;
-                padding-bottom: 2rem !important;
-            }
-        }
-
-        /* Prevent horizontal scrolling */
-        body {
-            max-width: 100vw;
-            overflow-x: hidden;
-        }
-
-        /* Smooth transitions for all elements */
-        * {
-            transition: all 0.3s ease;
-        }
-
-        /* Force responsive images */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-=======
->>>>>>> 379e968fca97ee77ecd43b10def31150877aab69
     </style>
 </head>
-<body class="overflow-x-hidden bg-background text-text-dark hidden">
+<body class="overflow-x-hidden bg-background text-text-dark">
 
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300">
         <nav class="container mx-auto flex items-center justify-between px-4 lg:px-8">
@@ -350,7 +151,7 @@
         
         <div class="z-10 animate-fadeInUp">
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 drop-shadow-xl leading-snug">
-                Discover the Magic of <span class="text-primary block lg:inline">Sri Lanka</span>
+                Experience the Magic of <span class="text-primary block lg:inline">Sri Lanka</span>
             </h1>
             <p class="text-xl lg:text-2xl font-light max-w-3xl mx-auto drop-shadow-lg mb-10">
                 Crafting personalized tours to the <b>Pearl of the Indian Ocean</b> just for you.
@@ -702,11 +503,7 @@
         </div>
     </footer>
     
-<<<<<<< HEAD
-    <a href="https://wa.me/94779479917" target="_blank" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
-=======
     <a href="https://wa.me/94779479917" target="_blank" class="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-secondary shadow-2xl transition-all duration-300 transform hover:scale-110 animate-whatsappPulse text-white" aria-label="Chat with us on WhatsApp">
->>>>>>> 379e968fca97ee77ecd43b10def31150877aab69
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
